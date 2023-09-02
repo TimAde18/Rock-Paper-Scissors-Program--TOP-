@@ -44,3 +44,38 @@ const playerSelection = "Paper";
 const computerSelection = getComputerChoice();
 console.log(choiceComparison(playerSelection, computerSelection));
 */
+
+// function that is a full 5 rounds of Rock Paper Scissors (I will make this a bit harder and make it so you can play for x amount of times)
+function game(numGames) {
+    let userWins = 0;
+    let computerWins = 0;
+    for (i=1; i<=numGames; i++) {
+        let playerSelection = prompt("Choose Rock, Paper, or Scissors!");
+        // optional 
+        let computerSelection = getComputerChoice();
+        comparisonResult = choiceComparison(playerSelection, computerSelection);
+
+        if (comparisonResult.includes("You Win!")) {
+            userWins++;
+            console.log("You won! your score is now " + userWins + " keep playing to win more!");
+        } else if (comparisonResult.includes("You Lose!")) {
+            computerWins++;
+            console.log("You lost... The computer's score is now " + computerWins + " keep playing to win more!");
+        }   else if (comparisonResult.includes("You Tied")) {
+            console.log("You tied with the computer! Keep playing to win more!");
+        } else if (comparisonResult.includes("That is not")) {
+            console.log("That is not a valid input please try again.");
+        }
+    };
+    if (userWins > computerWins) {
+        return "You beat the Computer! You are the Rock, Paper, Scissors Champ!" + "\nYour Score was " + userWins + " And the computers Score was " + computerWins + ".";
+    } else if (userWins == computerWins) {
+        return "You tied! Hurry commence a new battle and defeat your enemy!" + "\nYour Score was " + userWins + " And the computers Score was " + computerWins + ".";
+    } else {
+        return "You lost to the Computer... You are not the Rock, Paper, Scissors Champ. Your archnemesis, the computer is..." + "\nYour Score was " + userWins + " And the computers Score was " + computerWins + ".";
+    }
+};
+
+//tests for the game function
+//console.log(game(10));
+//console.log(game(5));
