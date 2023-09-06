@@ -10,8 +10,6 @@ function getComputerChoice() {
     }
 };
 
-//console.log(getComputerChoice());
-
 //function that will compare the value of user and computer. this is only one round
 function choiceComparison(playerSelection, computerSelection) {
     const playerValue = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
@@ -38,14 +36,9 @@ function choiceComparison(playerSelection, computerSelection) {
     }
 };
 
-//choiceComparison test
-/*
-const playerSelection = "Paper";
-const computerSelection = getComputerChoice();
-console.log(choiceComparison(playerSelection, computerSelection));
-*/
 
 // function that is a full 5 rounds of Rock Paper Scissors (I will make this a bit harder and make it so you can play for x amount of times)
+
 function game(numGames) {
     let userWins = 0;
     let computerWins = 0;
@@ -76,6 +69,15 @@ function game(numGames) {
     }
 };
 
-//tests for the game function
-//console.log(game(10));
-//console.log(game(5));
+//Creating buttons for player selection
+const rock = document.createElement("Button");
+rock.textContent = "Rock";
+rock.addEventListener("click", game);
+const paper = document.createElement("Button");
+paper.textContent = "Paper";
+paper.addEventListener("click", game);
+const scissors = document.createElement("Button");
+scissors.textContent = "Scissors";
+scissors.addEventListener("click", game);
+
+const score = document.createElement("div");
