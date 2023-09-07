@@ -14,5 +14,6 @@ In hindsight, there are a few areas I'd like to improve upon:
 * Element Creation: Instead of relying solely on JavaScript to create elements, I could have explored alternative approaches for a more efficient code structure.
 * UI Design: While focusing on functionality, I should have devoted more time to enhancing the project's visual appeal, especially since design isn't my strong suit. Especially since we were called to make a UI.
 * Resource Management: To develop stronger problem-solving skills, I realize that I should have struck a better balance between seeking external help (like consulting ChatGPT) and independently finding solutions.
+* Git Handling: While I was creating my program, I lost track of the importance of regular commits and missed out on honing my Git skills as well as I would have liked.
 
 This journey has been a valuable learning experience, and I'm excited to continue refining my skills and creating more engaging projects in the future.  
